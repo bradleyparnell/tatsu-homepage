@@ -4,7 +4,7 @@ let lastFocus=null;
 let activeDrawer=null;
 let plan='once';
 const bag=[];
-const products={lychee:{name:'Lychee',image:'lychee.jpg'},peach:{name:'Peach',image:'peach.png'},strawberry:{name:'Strawberry',image:'strawberry.png'}};
+const products={discovery:{name:'Discovery Pack (concept)',image:'lychee.jpg'},lychee:{name:'Lychee',image:'lychee.jpg'},peach:{name:'Peach',image:'peach.png'},strawberry:{name:'Strawberry',image:'strawberry.png'}};
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(n);
 function openDrawer(id){
   lastFocus=document.activeElement;
@@ -28,7 +28,14 @@ document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',(
 document.querySelectorAll('.close-btn').forEach(b=>b.addEventListener('click',closeDrawer));
 overlay.addEventListener('click',closeDrawer);
 document.getElementById('continue-shopping').addEventListener('click',closeDrawer);
-document.getElementById('offer-explore').addEventListener('click',()=>{closeDrawer();document.getElementById('shop').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});});
+function addDiscovery(){
+  const existing=bag.find(item=>item.product==='discovery');
+  if(existing)existing.quantity++;else bag.push({product:'discovery',plan:'once',quantity:1,price:19});
+  if(activeDrawer)closeDrawer();
+  renderBag();openDrawer('cart');
+}
+document.getElementById('offer-explore').addEventListener('click',addDiscovery);
+document.querySelectorAll('.add-discovery').forEach(b=>b.addEventListener('click',addDiscovery));
 document.addEventListener('keydown',event=>{
   if(event.key==='Escape')closeDrawer();
   if(event.key==='Tab'&&activeDrawer){
@@ -61,7 +68,7 @@ function renderBag(){
   bag.forEach((item,index)=>{
     const p=products[item.product];
     const el=document.createElement('article');el.className='cart-item';
-    el.innerHTML=`<img src="assets/${p.image}" alt="Tatsu ${p.name} tea"><div><h3>${p.name}</h3><small>24 cans · ${item.plan==='once'?'One-time purchase':'Monthly subscription'}</small><div class="cart-item-bottom"><div class="quantity"><button aria-label="Remove one ${p.name} pack" data-change="-1">−</button><span>${item.quantity}</span><button aria-label="Add one ${p.name} pack" data-change="1">+</button></div><strong>${money(item.price*item.quantity)}</strong></div></div>`;
+    el.innerHTML=`<img src="assets/${p.image}" alt="Tatsu ${p.name} tea"><div><h3>${p.name}</h3><small>${item.product==='discovery'?'6 cans · Proposed offer · Shipping included':`24 cans · ${item.plan==='once'?'One-time purchase':'Monthly subscription'}`}</small><div class="cart-item-bottom"><div class="quantity"><button aria-label="Remove one ${p.name} pack" data-change="-1">−</button><span>${item.quantity}</span><button aria-label="Add one ${p.name} pack" data-change="1">+</button></div><strong>${money(item.price*item.quantity)}</strong></div></div>`;
     el.querySelectorAll('[data-change]').forEach(b=>b.addEventListener('click',()=>{item.quantity+=Number(b.dataset.change);if(item.quantity===0)bag.splice(index,1);renderBag();}));
     items.appendChild(el);
   });
