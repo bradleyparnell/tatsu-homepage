@@ -119,12 +119,12 @@
 @container site (max-width:640px){.focused-hero .pack-scene{min-height:360px;grid-template-rows:auto 245px auto}.pack-scene-heading{padding:20px 14px 4px;font-size:8px}.pack-scene-heading span{font-size:20px}.six-pack-art{width:90%;height:auto;min-height:0;max-width:360px;margin:7px auto 12px}.focused-hero .pack-plinth{padding:13px 10px}}
 .focused-hero .pack-scene{background:radial-gradient(ellipse at 50% 40%,#eef3d2 0%,#cfdda0 46%,#a7bf6b 100%)}
 .six-pack-art img.pack-can{object-fit:contain;max-width:none;filter:drop-shadow(3px 7px 5px #31472322)}
-/* A continuous forest-to-matcha atmosphere, rather than two flat panels. */
-.focused-hero{background:linear-gradient(110deg,#102f24 0%,#16432f 38%,#3c6337 57%,#a9c773 100%)}
-.focused-hero .hero-copy{background:radial-gradient(ellipse at 0 100%,#3f75412e,transparent 70%)}
-.focused-hero .pack-scene{background:radial-gradient(ellipse at 60% 40%,#ecf6c28c 0%,#bbd78d40 44%,transparent 76%)}
+/* One shared, muted green atmosphere: no independently tinted column panels. */
+.focused-hero{background:radial-gradient(ellipse at 82% 43%,#7b956f66 0%,#6a886030 27%,transparent 59%),linear-gradient(105deg,#123629 0%,#1b4231 39%,#365b40 72%,#536f4d 100%)}
+.focused-hero .hero-copy{background:transparent}
+.focused-hero .pack-scene{background:transparent}
 .pack-scene-heading{color:#f5f8e7;text-shadow:0 1px 9px #16372638}
 .pack-scene-heading span{color:#fffef4}
-.focused-hero .pack-plinth{background:#183c2b3d;color:#fffef4;border-top:1px solid #e5efd12b}
+.focused-hero .pack-plinth{background:transparent;color:#fffef4;border-top:0;box-shadow:none}
 .six-pack-art{filter:drop-shadow(0 16px 12px #122c263d)}
-@container site (max-width:640px){.focused-hero{background:linear-gradient(145deg,#102f24 0%,#194b34 49%,#668c47 78%,#b1cc7f 100%)}.focused-hero .pack-scene{background:radial-gradient(ellipse at 60% 42%,#eef8ce73,transparent 77%)}}
+@container site (max-width:640px){.focused-hero{background:radial-gradient(ellipse at 58% 80%,#7b956f55,transparent 52%),linear-gradient(160deg,#123629 0%,#1b4231 49%,#456344 100%)}.focused-hero .pack-scene{background:transparent}}
