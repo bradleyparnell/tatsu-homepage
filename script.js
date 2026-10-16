@@ -11,13 +11,13 @@ function openDrawer(id){
   if(activeDrawer){activeDrawer.classList.remove('open');activeDrawer.setAttribute('aria-hidden','true');activeDrawer.inert=true;}
   activeDrawer=document.getElementById(id+'-drawer');
   activeDrawer.inert=false;activeDrawer.classList.add('open');activeDrawer.setAttribute('aria-hidden','false');
-  overlay.classList.add('open');site.inert=true;document.querySelector('.concept-bar').inert=true;document.body.style.overflow='hidden';
+  overlay.classList.add('open');site.inert=true;document.body.style.overflow='hidden';
   activeDrawer.querySelector('.close-btn').focus();
 }
 function closeDrawer(){
   if(!activeDrawer)return;
   activeDrawer.classList.remove('open');activeDrawer.setAttribute('aria-hidden','true');activeDrawer.inert=true;
-  overlay.classList.remove('open');site.inert=false;document.querySelector('.concept-bar').inert=false;document.body.style.overflow='';activeDrawer=null;
+  overlay.classList.remove('open');site.inert=false;document.body.style.overflow='';activeDrawer=null;
   if(lastFocus)lastFocus.focus();
 }
 document.querySelectorAll('[data-view]').forEach(button=>button.addEventListener('click',()=>{
