@@ -80,3 +80,13 @@ document.getElementById('menu-button').addEventListener('click',()=>{
   document.getElementById('menu-button').setAttribute('aria-expanded',String(open));
 });
 document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('navigation').classList.remove('mobile-menu-open');document.getElementById('menu-button').setAttribute('aria-expanded','false');}));
+const benefitRibbon=document.querySelector('.benefits-ribbon');
+const ribbonPause=document.querySelector('.ribbon-pause');
+if(benefitRibbon && ribbonPause){
+  ribbonPause.addEventListener('click',()=>{
+    const paused=benefitRibbon.classList.toggle('is-paused');
+    ribbonPause.setAttribute('aria-pressed',String(paused));
+    ribbonPause.setAttribute('aria-label',paused?'Resume scrolling benefits':'Pause scrolling benefits');
+    ribbonPause.innerHTML=paused?'<span aria-hidden="true">▶</span>':'<span aria-hidden="true">Ⅱ</span>';
+  });
+}
