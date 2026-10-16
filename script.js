@@ -4,7 +4,7 @@ let lastFocus=null;
 let activeDrawer=null;
 let plan='once';
 const bag=[];
-const products={discovery:{name:'Discovery Pack (concept)',image:'lychee.jpg'},lychee:{name:'Lychee',image:'lychee.jpg'},peach:{name:'Peach',image:'peach.png'},strawberry:{name:'Strawberry',image:'strawberry.png'}};
+const products={discovery:{name:'Discovery Pack (concept)',image:'studio-discovery-pack.png'},lychee:{name:'Lychee',image:'lychee.jpg'},peach:{name:'Peach',image:'peach.png'},strawberry:{name:'Strawberry',image:'strawberry.png'}};
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(n);
 function openDrawer(id){
   lastFocus=document.activeElement;
