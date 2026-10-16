@@ -107,3 +107,13 @@
 .focused-hero .quiet-benefits .benefit-icon{background:#fffef4;color:#234d30;border-color:#fffef4}
 @container site (min-width:641px){.focused-hero .quiet-benefits .feature+.feature{border-left:1px solid #496253}}
 @container site (max-width:640px){.hero-unit-price{font-size:10px;margin-top:6px}.focused-hero .hero-proof p{font-size:11px}.ritual-reasons{padding:34px 6%}.ritual-reasons h2{font-size:31px}.reason-grid{grid-template-columns:1fr;gap:19px;margin:23px 0}.reason-grid article{display:grid;grid-template-columns:1fr 1fr;gap:7px 15px}.reason-number{grid-column:1/-1}.reason-grid h3{font-size:20px;margin:0}.reason-grid p{font-size:12px}.focused-hero .guarantee-line{font-size:9px}}
+/* Product scene: dedicated text, product, and caption rows prevent overlap. */
+.focused-hero .pack-scene{display:grid;grid-template-rows:auto minmax(300px,1fr) auto;justify-content:stretch;align-items:stretch;min-height:530px;background:radial-gradient(ellipse at 50% 50%,#edf2ce 0%,#c3d18e 80%)}
+.pack-scene-heading{position:relative;top:auto;left:auto;right:auto;padding:27px 18px 8px;z-index:3;font-size:9px;letter-spacing:.17em}
+.pack-scene-heading span{font-size:clamp(19px,1.7cqi,25px);margin-top:7px;line-height:1.2;letter-spacing:-.035em}
+.six-pack-art{align-self:stretch;width:94%;max-width:590px;height:auto;min-height:300px;margin:8px auto 12px;filter:drop-shadow(0 12px 8px #35522b30)}
+.pack-can{width:27%;height:86%;overflow:visible}
+.can-0{left:5%;top:0;transform:rotate(-9deg)}.can-1{left:36.5%;top:0;transform:rotate(0deg)}.can-2{right:5%;top:0;transform:rotate(9deg)}
+.can-3{left:15%;top:13%;transform:rotate(-6deg)}.can-4{left:38%;top:14%;transform:rotate(1deg)}.can-5{right:10%;top:13%;transform:rotate(7deg)}
+.focused-hero .pack-plinth{padding:16px 12px;border-top:1px solid #bdc99b;box-shadow:none}
+@container site (max-width:640px){.focused-hero .pack-scene{min-height:360px;grid-template-rows:auto 245px auto}.pack-scene-heading{padding:20px 14px 4px;font-size:8px}.pack-scene-heading span{font-size:20px}.six-pack-art{width:90%;height:auto;min-height:0;max-width:360px;margin:7px auto 12px}.focused-hero .pack-plinth{padding:13px 10px}}
