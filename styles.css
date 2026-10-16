@@ -117,3 +117,5 @@
 .can-3{left:15%;top:13%;transform:rotate(-6deg)}.can-4{left:38%;top:14%;transform:rotate(1deg)}.can-5{right:10%;top:13%;transform:rotate(7deg)}
 .focused-hero .pack-plinth{padding:16px 12px;border-top:1px solid #bdc99b;box-shadow:none}
 @container site (max-width:640px){.focused-hero .pack-scene{min-height:360px;grid-template-rows:auto 245px auto}.pack-scene-heading{padding:20px 14px 4px;font-size:8px}.pack-scene-heading span{font-size:20px}.six-pack-art{width:90%;height:auto;min-height:0;max-width:360px;margin:7px auto 12px}.focused-hero .pack-plinth{padding:13px 10px}}
+.focused-hero .pack-scene{background:radial-gradient(ellipse at 50% 40%,#eef3d2 0%,#cfdda0 46%,#a7bf6b 100%)}
+.six-pack-art img.pack-can{object-fit:contain;max-width:none;filter:drop-shadow(3px 7px 5px #31472322)}
