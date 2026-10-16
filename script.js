@@ -90,3 +90,12 @@ if(benefitRibbon && ribbonPause){
     ribbonPause.innerHTML=paused?'<span aria-hidden="true">▶</span>':'<span aria-hidden="true">Ⅱ</span>';
   });
 }
+
+// Show the mobile purchase shortcut only after the primary CTA has been passed.
+const heroPurchaseButton=document.querySelector('.hero-convert');
+const stickyPurchase=document.querySelector('.mobile-sticky');
+if(heroPurchaseButton&&stickyPurchase){
+  const syncSticky=()=>stickyPurchase.classList.toggle('is-visible',heroPurchaseButton.getBoundingClientRect().bottom<0);
+  const stickyObserver=new IntersectionObserver(syncSticky,{threshold:[0,1]});
+  stickyObserver.observe(heroPurchaseButton);window.addEventListener('scroll',syncSticky,{passive:true});syncSticky();
+}
