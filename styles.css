@@ -128,3 +128,14 @@
 .focused-hero .pack-plinth{background:transparent;color:#fffef4;border-top:0;box-shadow:none}
 .six-pack-art{filter:drop-shadow(0 16px 12px #122c263d)}
 @container site (max-width:640px){.focused-hero{background:radial-gradient(ellipse at 58% 80%,#7b956f55,transparent 52%),linear-gradient(160deg,#123629 0%,#1b4231 49%,#456344 100%)}.focused-hero .pack-scene{background:transparent}}
+/* Ground the product in real matcha and restrained flavor photography. */
+.hero-ingredients{position:absolute;inset:0;pointer-events:none;z-index:2}
+.hero-ingredients img{position:absolute;object-fit:contain;max-width:none;filter:drop-shadow(0 9px 7px #102a2250)}
+.hero-ingredients .ingredient-mound{width:40%;left:0;bottom:-2%;opacity:.98;transform:rotate(-3deg)}
+.hero-ingredients .ingredient-peach{width:26%;right:-2%;bottom:9%;transform:rotate(6deg)}
+.hero-ingredients .ingredient-berry{width:21%;left:-1%;bottom:10%;transform:rotate(-12deg)}
+.hero-ingredients .ingredient-lychee{width:19%;right:4%;bottom:-1%;transform:rotate(9deg)}
+.six-pack-art .pack-can{z-index:1}
+.focused-hero .pack-scene{overflow:hidden}
+.six-pack-art{margin-bottom:20px}
+@container site (max-width:640px){.hero-ingredients .ingredient-mound{width:37%;left:0;bottom:-1%}.hero-ingredients .ingredient-peach{width:23%;right:0;bottom:11%}.hero-ingredients .ingredient-berry{width:18%;left:0;bottom:9%}.hero-ingredients .ingredient-lychee{width:17%;right:5%;bottom:0}.six-pack-art{margin-bottom:16px}}
