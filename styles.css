@@ -131,11 +131,13 @@
 /* Ground the product in real matcha and restrained flavor photography. */
 .hero-ingredients{position:absolute;inset:0;pointer-events:none;z-index:2}
 .hero-ingredients img{position:absolute;object-fit:contain;max-width:none;filter:drop-shadow(0 9px 7px #102a2250)}
-.hero-ingredients .ingredient-mound{width:49%;left:-4%;bottom:-5%;opacity:.98;transform:rotate(-3deg)}
-.hero-ingredients .ingredient-peach{width:35%;right:-5%;bottom:6%;transform:rotate(6deg)}
-.hero-ingredients .ingredient-berry{width:28%;left:-3%;bottom:10%;transform:rotate(-12deg)}
-.hero-ingredients .ingredient-lychee{width:25%;right:0;bottom:-4%;transform:rotate(9deg)}
+.hero-ingredients .ingredient-mound{width:43%;left:9%;bottom:-5%;opacity:.98;transform:none}
+.hero-ingredients .ingredient-peach{width:35%;right:-5%;bottom:-3%;transform:none}
+.hero-ingredients .ingredient-berry{width:28%;left:-5%;bottom:-4%;transform:none}
+.hero-ingredients .ingredient-lychee{width:25%;right:6%;bottom:-5%;transform:none}
 .six-pack-art .pack-can{z-index:1}
 .focused-hero .pack-scene{overflow:hidden}
 .six-pack-art{margin-bottom:20px}
-@container site (max-width:640px){.hero-ingredients .ingredient-mound{width:46%;left:-3%;bottom:-4%}.hero-ingredients .ingredient-peach{width:33%;right:-3%;bottom:6%}.hero-ingredients .ingredient-berry{width:26%;left:-2%;bottom:9%}.hero-ingredients .ingredient-lychee{width:24%;right:0;bottom:-3%}.six-pack-art{margin-bottom:22px}}
+@container site (max-width:640px){.hero-ingredients .ingredient-mound{width:42%;left:9%;bottom:-4%}.hero-ingredients .ingredient-peach{width:33%;right:-3%;bottom:-2%}.hero-ingredients .ingredient-berry{width:26%;left:-4%;bottom:-3%}.hero-ingredients .ingredient-lychee{width:24%;right:6%;bottom:-4%}.six-pack-art{margin-bottom:22px}}
+.six-pack-art::before{content:"";position:absolute;left:0;right:0;bottom:-8%;height:13%;border-radius:50%;background:radial-gradient(ellipse,#081d15a6 0%,#0a21165c 42%,transparent 72%);filter:blur(7px);z-index:0;pointer-events:none}
+.hero-ingredients img{filter:drop-shadow(1px 4px 2px #10251c80)}
