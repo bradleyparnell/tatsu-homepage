@@ -32,3 +32,29 @@
 @container site (max-width:1100px){.benefit-band{padding:27px 2%}.benefit-band .feature{padding:3px 11px;gap:9px}.benefit-band .benefit-icon{width:39px;height:39px;flex-basis:39px}.benefit-band .feature svg{width:23px;height:23px}.benefit-band .feature small{font-size:10px}}
 @container site (max-width:760px){.benefit-band{grid-template-columns:1fr 1fr;padding:9px 5%;gap:0}.benefit-band .feature{padding:22px 12px;justify-content:flex-start;gap:12px}.benefit-band .feature+.feature{border-left:0}.benefit-band .feature:nth-child(even){border-left:1px solid #234d3033;padding-left:20px}.benefit-band .feature:nth-child(n+3){border-top:1px solid #234d3033}.benefit-band .feature strong{font-size:15px}.benefit-band .feature small{font-size:11px}.benefit-band .benefit-icon{width:40px;height:40px;flex-basis:40px}}
 @container site (max-width:440px){.benefit-band{padding:6px 4%}.benefit-band .feature{padding:21px 7px;gap:8px}.benefit-band .feature:nth-child(even){padding-left:12px}.benefit-band .benefit-icon{width:31px;height:31px;flex-basis:31px}.benefit-band .feature svg{width:20px;height:20px}.benefit-band .feature strong{font-size:13px;letter-spacing:-.04em}.benefit-band .feature small{font-size:10px;line-height:1.4;margin-top:5px}}
+/* Benefits belong in the first purchase decision, not below the fold. */
+.response-hero{min-height:0;grid-template-columns:1.1fr 1fr}
+.response-hero .hero-copy{padding:28px 7% 24px 9%;justify-content:center}
+.response-hero h1{font-size:clamp(38px,3.8cqi,57px);margin:16px 0 10px}
+.response-hero .hero-description{font-size:14px;line-height:1.45}
+.response-hero .hero-photo{min-height:0}
+.response-hero .hero-benefits{display:grid;grid-template-columns:1fr 1fr;gap:16px 12px;background:none;box-shadow:none;border:0;padding:0;margin:22px 0 18px;color:#fffef4;position:static}
+.response-hero .hero-benefits .feature{border:0;padding:0;gap:11px;justify-content:flex-start;align-items:center}
+.response-hero .hero-benefits .benefit-icon{width:48px;height:48px;flex:0 0 48px;background:#f4f8df;border:0;box-shadow:0 3px 0 #0d291c;color:#204c32}
+.response-hero .hero-benefits .feature svg{width:28px;height:28px;stroke-width:2}
+.response-hero .hero-benefits .feature strong{font-size:15px;line-height:1.15;letter-spacing:-.025em;color:#e3f28e}
+.response-hero .hero-benefits .feature small{font-size:11px;line-height:1.35;color:#fffef4;margin-top:4px}
+.response-hero .hero-offer{margin:0 0 13px}
+.response-hero .offer-price-lockup>strong{font-size:66px}
+.response-hero .offer-kicker{margin-bottom:4px;font-size:9px}
+.response-hero .hero-convert{min-height:54px;padding:14px 20px}
+.response-hero .offer-footnote{font-size:9px;margin-top:11px;line-height:1.4}
+.response-hero .hero-shop-link{margin-top:7px}
+.below-hero-proof{background:#f0f2e2;padding:17px 6%;border-bottom:1px solid #d4dbc3}
+.below-hero-proof .hero-proof{margin:0;padding:0;border:0;align-items:center;justify-content:center;gap:14px}
+.below-hero-proof .hero-proof p{max-width:none;font-size:14px;color:#173e2b;font-weight:600}
+.below-hero-proof .hero-proof small{font-size:10px;color:#4b6048;margin-top:3px}
+.below-hero-proof .proof-quote{font-size:42px;color:#416631}
+@container site (max-width:950px){.response-hero .hero-copy{padding:24px 6%}.response-hero h1{font-size:38px}.response-hero .hero-benefits{gap:13px 8px}.response-hero .hero-benefits .benefit-icon{width:39px;height:39px;flex-basis:39px}.response-hero .hero-benefits .feature{gap:8px}.response-hero .hero-benefits .feature strong{font-size:12px}.response-hero .hero-benefits .feature small{font-size:10px}}
+@container site (max-width:640px){.nav{height:68px}.nav .brand-logo{width:56px;height:56px}.nav.mobile-menu-open .nav-links{top:68px}.announcement{font-size:7px;padding:8px 10px}.announcement span{font-size:7px}.response-hero{grid-template-columns:1fr}.response-hero .hero-copy{padding:20px 6% 18px}.hero-intro{font-size:8px;gap:8px}.hero-intro small{display:none}.hero-intro-icon{width:27px;height:27px;background:#f4f8df;color:#204c32;border:0}.hero-intro-icon svg{width:18px;height:18px}.response-hero h1{font-size:36px;line-height:1.04;margin:14px 0 10px}.response-hero .hero-description{font-size:12px;line-height:1.45}.response-hero .hero-benefits{gap:14px 10px;margin:18px 0}.response-hero .hero-benefits .benefit-icon{width:40px;height:40px;flex-basis:40px}.response-hero .hero-benefits .feature svg{width:24px;height:24px}.response-hero .hero-benefits .feature strong{font-size:12px}.response-hero .hero-benefits .feature small{font-size:10px;line-height:1.3}.response-hero .hero-offer{margin:0 0 13px}.response-hero .offer-price-lockup>strong{font-size:57px}.offer-price-lockup b{font-size:20px}.offer-price-lockup div>span{font-size:11px}.offer-inclusions{font-size:10px;margin-top:7px}.response-hero .hero-convert{min-height:51px;font-size:14px;padding:12px}.guarantee-line{margin-top:11px;font-size:9px}.response-hero .offer-footnote{font-size:8px;margin-top:10px}.response-hero .hero-shop-link{font-size:9px;margin-top:7px}.response-hero .hero-photo{min-height:390px}.below-hero-proof{padding:20px 6%}.below-hero-proof .hero-proof p{font-size:12px}.below-hero-proof .hero-proof small{font-size:9px}}
+@container site (max-width:360px){.response-hero h1{font-size:32px}.response-hero .hero-benefits .feature strong{font-size:11px}.response-hero .hero-benefits .feature small{font-size:9px}.response-hero .hero-benefits .benefit-icon{width:34px;height:34px;flex-basis:34px}.response-hero .hero-benefits .feature{gap:7px}}
